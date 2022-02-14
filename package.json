@@ -1,6 +1,6 @@
 {
     "name": "@saimulhasnain-dev/strings-manipulator",
-    "version": "1.2.5",
+    "version": "1.0.0",
     "description": "Human-friendly and powerful npm string manipulation package/library to play with strings",
     "author": "Saimul Hasnain",
     "license": "MIT",
