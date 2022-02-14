@@ -1,0 +1,31 @@
+{
+    "name": "@saimulhasnain-dev/strings-manipulator",
+    "version": "1.2.5",
+    "description": "Human-friendly and powerful npm string manipulation package/library to play with strings",
+    "author": "Saimul Hasnain",
+    "license": "MIT",
+    "repository": "https://github.com/saimulhasnain-dev/input-validator.git",
+    "keywords": [
+        "npm",
+        "package",
+        "string",
+        "string property",
+        "string",
+        "input",
+        "convert",
+        "capital case",
+        "camel case",
+        "uppercase",
+        "lower case",
+        "string conversion",
+        "string manipulation",
+        "javascript library",
+        "js",
+        "data type",
+        "node js",
+        "js library",
+        "saimul",
+        "saimulhasnain",
+        "saimulhasnain-dev"
+    ]
+}
