@@ -1,223 +1,196 @@
 /**
- * This method checks an array is empty or not
- * @param {*} arr 
- * @returns boolean
+ * Function to convert string into uppercase string
+ * @param {*} str:String
+ * @returns 
  */
-module.exports.isEmptyArray = (arr) => {
-  return arr.length ? true : false;
+module.exports.intoUpperCase = (str) => {
+  return str.toUpperCase()
 }
 /**
- * This method checks if a value is valid string or not
+ * Function to convert string into lowercase string
+ * @param {*} str:String
+ * @returns 
+ */
+module.exports.intoLowerCase = (str) => {
+  return str.toLowerCase()
+}
+/**
+ * Function to get character at position
+ * @param {*} str:String 
+ * @param {*} position:Number 
+ * @returns 
+ */
+module.exports.charAt = (str, position) => {
+  return str.charAt(position)
+}
+/**
+ * Function to get character ASCII code at position
  * @param {*} str 
- * @returns boolean
+ * @param {*} position 
+ * @returns 
  */
-module.exports.isString = (str) => {
-  return typeof str === 'string';
+module.exports.charCodeAt = (str, position) => {
+  return str.charCodeAt(position)
 }
 /**
- * This method checks if a value is valid number or not
- * @param {*} val 
+ * Function to check if string ends with a particular word
+ * @param {*} str:String 
+ * @param {*} key:String 
  * @returns boolean
  */
-module.exports.isNumeric = (val) => {
-  const numeric_regex = /^[0-9]+$/;
-  return numeric_regex.test(val);
+module.exports.endsWith = (str, key) => {
+  return str.endsWith(key)
 }
 /**
- * This method checks if a value is valid email address or not
- * @param {*} email 
+ * Function to check if string starts with a particular word
+ * @param {*} str:String 
+ * @param {*} key:String 
  * @returns boolean
  */
-module.exports.isValidEmail = (email) => {
-  const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return email_regex.test(email);
-};
+module.exports.startsWith = (str, key) => {
+  return str.startsWith(key)
+}
 /**
- * This method checks if a value contains only alphabet or not
- * @param {*} text 
+ * Function to get string from char code
+ * @param {*} code:Number 
+ * @returns 
+ */
+module.exports.fromCharCode = (code) => {
+  return str.fromCharCode(code)
+}
+/**
+ * Function to check if string includes a particular word or not
+ * @param {*} str:String 
+ * @param {*} key:String 
  * @returns boolean
  */
-module.exports.isAlphabet = (text) => {
-  const alphabet_regex = /^[a-zA-Z]+$/;
-  return alphabet_regex.test(text);
+module.exports.stringIncludes = (str, key) => {
+  return str.includes(key)
 }
 /**
- * This method checks if a value contains alphanumeric values only or not
- * @param {*} text 
- * @returns boolean
+ * Function to get position of a particular word within a string
+ * @param {*} str:String 
+ * @param {*} key:String 
+ * @returns 
  */
-module.exports.isAlphaNumericOnly = (text) => {
-  const text_regex = /^[a-zA-Z0-9]+$/;
-  return text_regex.test(text);
+module.exports.positionOf = (str, key) => {
+  return str.indexOf(key)
 }
 /**
- * This method checks if a value contains alphanumeric values and special character as well 
- * @param {*} text 
- * @returns boolean
+ * Function to get last position/index value of a particular word within a string
+ * @param {*} str:String 
+ * @param {*} key:String 
+ * @returns 
  */
-module.exports.isSpecialCharAlphaNumeric = (text) => {
-  const text_regex = /^[ A-Za-z0-9_!@#$%^&*()_+-=±§`~.,/|}{)(]*$/;
-  return text_regex.test(text);
+module.exports.lastPositionOf = (str, key) => {
+  return str.lastIndexOf(key)
 }
 /**
- * This method checks if a value is undefined or not
- * @param {*} text 
- * @returns boolean
- */
-module.exports.isUndefined = (text) => {
-  return typeof text === undefined;
-}
-/**
- * This method checks if a value is null or not
- * @param {*} text 
- * @returns boolean
- */
-module.exports.isNull = (text) => {
-  return text === null;
-}
-/**
- * This method checks if a value is boolean or not
- * @param {*} text 
- * @returns boolean
- */
-module.exports.isBoolean = (text) => {
-  return typeof text === 'boolean';
-}
-/**
- * This method checks if a value is array or not
- * @param {*} text 
- * @returns boolean
- */
-module.exports.isArray = (text) => {
-  return Array.isArray(text)
-}
-/**
- * This method will return trim and sanitized form of given string
- * @param {*} text 
- * @returns string
- */
-module.exports.sanitizeString = (text) => {
-  text = text.replace(/[^a-z0-9áéíóúñü \.,_-]/gim, "");
-  return text.trim();
-}
-/**
- * This method will return integer parsed value of given string
- * @param {*} numeric 
+ * Function to get length of a string
+ * @param {*} str:String 
  * @returns number
  */
-module.exports.toInt = (numeric) => {
-  return parseInt(numeric);
+module.exports.lengthOfString = (str) => {
+  return str.length
 }
 /**
- * This method will return float parsed value of given string
- * @param {*} numeric 
- * @returns number
+ * Function to check if string matched a particular regex or a word in a given string
+ * @param {*} str:String 
+ * @param {*} key:String 
+ * @returns 
  */
-module.exports.toFloat = (numeric) => {
-  return parseFloat(numeric);
+module.exports.stringMatches = (str, key) => {
+  return str.match(key)
 }
 /**
- * This method will return date parsed value of given string if it is string otherwise null
- * @param {*} date 
- * @returns Date
+ * Function to repeat string n number of times 
+ * @param {*} str:String 
+ * @param {*} times:String 
+ * @returns 
  */
-module.exports.toDate = (date) => {
-  date = Date.parse(date);
-  return !isNaN(date) ? new Date(date) : null;
+module.exports.repeatString = (str, times) => {
+  return str.repeat(times)
 }
 /**
- * This method checks if a value is URL or not
- * @param {*} text 
- * @returns boolean
+ * Function to replace a word with another within a string
+ * @param {*} str:String 
+ * @param {*} replace:String 
+ * @param {*} replacewith:String 
+ * @returns 
  */
-module.exports.isURL = (text) => {
-  const res = text.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-  return res !== null;
+module.exports.replaceString = (str, replace, replacewith) => {
+  return str.replace(replace, replacewith)
 }
 /**
- * This method checks if a value is valid number or not
- * @param {*} numeric 
- * @returns boolean
+ * Function to return a string between two index within a string
+ * @param {*} str:String 
+ * @param {*} startPos:Number 
+ * @param {*} endPos:Number 
+ * @returns 
  */
-module.exports.isValidNumber = (numeric) => {
-  return !isNaN(numeric);
+module.exports.splitString = (str, startPos, endPos) => {
+  return str.slice(startPos, endPos)
 }
 /**
- * This method checks if a value is valid latitude and longitude
- * @param {*} lat 
- * @param {*} lng 
- * @returns boolean
+ * Function to return array of words from string using a specific splitter
+ * @param {*} str:String 
+ * @param {*} splitter:String 
+ * @returns 
  */
-module.exports.isValidLatLong = (lat, lng) => {
-  const pattern = new RegExp('^-?([1-8]?[1-9]|[1-9]0)\\.{1}\\d{1,6}');
-  return pattern.test(lat) && pattern.test(lng);
+module.exports.convertStringToArray = (str, splitter) => {
+  return str.split(splitter)
 }
 /**
- * This method checks if a password is strong enough or not
- * @param {*} password 
- * @returns boolean
+ * Function to convert first letter of string into capital order
+ * @param {*} str:String 
+ * @returns 
  */
-module.exports.isStrongPassword = (password) => {
-  const pattern = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{10,})');
-  return pattern.test(password);
+module.exports.convertFirstCaps = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 /**
- * This method checks if a password is having at least medium complexity or not
- * @param {*} password 
- * @returns boolean
+ * Function to convert string into camel case 
+ * @param {*} str:String 
+ * @returns 
  */
-module.exports.isMediumPassword = (password) => {
-  const pattern = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
-  return pattern.test(password);
+module.exports.convertCamelCase = (str) => {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
 }
 /**
- * This method checks if a value is date or not
- * @param {*} date 
- * @returns boolean
+ * Function to convert string into pascal case
+ * @param {*} str:String 
+ * @returns 
  */
-module.exports.isDate = (date) => {
-  return !isNaN(Date.parse(date));
+module.exports.convertPascalCase = (str) => {
+  return str.replace(/(\w)(\w*)/g,
+    function (g0, g1, g2) { return g1.toUpperCase() + g2.toLowerCase() })
 }
 /**
- * This method checks if a value is an object or not
- * @param {*} val 
- * @returns boolean
+ * Function to convert any other character format into normal like pascal to normal
+ * @param {*} str:String 
+ * @returns 
  */
-module.exports.isObject = (val) => {
-  return val.constructor.toString().indexOf("Object") > -1;
+module.exports.convertNormalCase = (str) => {
+  const result = str.replace(/([A-Z])/g, " $1");
+  return result.charAt(0).toUpperCase() + result.slice(1);
 }
 /**
- * This method checks if a key is exists in the given object or not 
- * @param {*} obj 
- * @param {*} key 
- * @returns boolean
+ * Function to convert normal number into roman format
+ * @param {*} num:Number 
+ * @returns 
  */
-module.exports.isKeyExists = (obj, key) => {
-  return obj[key] !== undefined;
-}
-/**
- * This method checks if a key is exists in the given nested object at desired level
- * @param {*} obj 
- * @returns boolean
- */
-module.exports.isKeyExistsNested = function checkNested(obj) {
-  var args = Array.prototype.slice.call(arguments, 1);
-
-  for (var i = 0; i < args.length; i++) {
-    if (!obj || !obj.hasOwnProperty(args[i])) {
-      return false;
-    }
-    obj = obj[args[i]];
-  }
-  return true;
-}
-/**
- * This method will return value of a key from the nested object
- * @param {*} nestedObj 
- * @param {*} pathArr 
- * @returns string
- */
-module.exports.getValueFromObject = (nestedObj, pathArr) => {
-  return pathArr.reduce((obj, key) =>
-    (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+module.exports.convertRoman = (num) => {
+  if (isNaN(num))
+    return NaN;
+  var digits = String(+num).split(""),
+    key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+      "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
+      "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+    roman = "",
+    i = 3;
+  while (i--)
+    roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+  return Array(+digits.join("") + 1).join("M") + roman;
 }

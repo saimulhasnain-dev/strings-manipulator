@@ -7,6 +7,10 @@
     "repository": "https://github.com/saimulhasnain-dev/input-validator.git",
     "keywords": [
         "npm",
+        "roman",
+        "camel case",
+        "pascal case",
+        "string to array",
         "package",
         "string",
         "string property",

@@ -1,5 +1,5 @@
-![npm version](https://img.shields.io/npm/v/input-validator?color=green&label=npm&style=flat-square)
-![size](https://img.shields.io/bundlephobia/min/@saimulhasnain-dev/input-validator)
+![npm version](https://img.shields.io/npm/v/strings-manipulator?color=green&label=npm&style=flat-square)
+![size](https://img.shields.io/bundlephobia/min/@saimulhasnain-dev/strings-manipulator)
 # Input validator
 
 > Human-friendly and powerful data validator library for JavaScript
@@ -29,86 +29,63 @@ Start with installation of package in your project:
 
 ```sh
 $ cd PROJECT
-$ npm i @saimulhasnain-dev/input-validator
+$ npm i @saimulhasnain-dev/strings-manipulator
 ```
 
 After successful installation of package you need to import package in your file:
 To import complete package in once
 
 ```sh
-$ import validator from '@saimulhasnain-dev/input-validator';
+$ import manipulator from '@saimulhasnain-dev/strings-manipulator';
 ```
 
 Or if you prefer using any particular function then:
 
 ```sh
-$ import { isAlphabet } from '@saimulhasnain-dev/input-validator';
+$ import { stringIncludes } from '@saimulhasnain-dev/strings-manipulator';
 ```
 
 ## Examples
 
 ```tsx
-import validator from '@saimulhasnain-dev/input-validator';
+import manipulator from '@saimulhasnain-dev/strings-manipulator';
 
-let res = validator.isAlphabet('abc');//to verify string contains alphabet
-console.log(res); // it will print `true` as it contains alphabet
+let res = manipulator.intoUpperCase('abc');//to convert string into capital case string
+console.log(res); // it will print `ABC` 
 
-validator.isStrongPassword('Qwert@!2313');//to check password strength
+manipulator.endsWith('Hello world','world');//to check string end with world
 
 ```
 Accessing only required function
 
 ```tsx
-import { isValidEmail } from '@saimulhasnain-dev/input-validator';
-isValidEmail('abc@gmail.com');//to test email is valid or not
+import { stringIncludes } from '@saimulhasnain-dev/strings-manipulator';
+stringIncludes('hello npm package','npm');//to test if string includes a particular word
 
 ```
-```tsx
-import { getValueFromObject, isKeyExistsNested } from '@saimulhasnain-dev/input-validator';
-const user = {
-    name: "abc",
-    email: "xyz@email.com",
-    address: {
-        state: "New york",
-        country: "USA",
-        phones: {
-            primary: "+1234567890",
-            secondary: "+0987654321"
-        }
-    }
-}
-getValueFromObject(user, ["address", "state"]);//to get value of `state` key inside `address` object
-getValueFromObject(user, ["address", "phones","primary"])////to get value of `primary` key inside `phone` object inside `address`
 
-isKeyExistsNested(user, "address", "phones","primary");// to check if key `primary` exists in this object or not
-
-```
 ## Available methods
-- **isEmptyArray**: To check if array is empty or not
-- **isString**: To check if value is string or not
-- **isNumeric**: To check string is numeric type 
-- **isValidEmail**: To check email is valid or not
-- **isAlphabet**: To check if string contain alphabet only
-- **isAlphaNumericOnly**: To check if string contains alphabet and numeric as well
-- **isSpecialCharAlphaNumeric**: To check if string contains alphabet with combination of number and special characters
-- **isUndefined**: To check if variable is undefined
-- **isNull**: To check if variable is null
-- **isBoolean**: To check if variable boolean 
-- **isArray**: To check if variable is an array
-- **sanitizeString**: To get sanitized version of value
-- **toInt**: To parse in integer format
-- **toFloat**: To parse in floating point format
-- **toDate**: To parse in date type
-- **isURL**: To check if a URL is valid or not
-- **isValidNumber**: To check valid numnber
-- **isValidLatLong**: To check valid latitude and longitude points
-- **isStrongPassword**: To check string password complexity
-- **isMediumPassword**: To check medium password complexity
-- **isDate**: To check if a value is date
-- **isObject**: To check if a value is object
-- **isKeyExists**: To check if a particular key is exists in an object or not(not in nested object)
-- **isKeyExistsNested**: To check if a particular key is exists in an object or not(in nested object)
-- **getValueFromObject**: To get value of a key from a nested object
+- **intoUpperCase**: Function to convert string into capital case string
+- **intoLowerCase**: Function to convert string into lower case string
+- **charAt**: Function to get string at particular position
+- **charCodeAt**: Function to get char code(ASCII) at a particular position in a string
+- **endsWith**: To check if string end with a particular word
+- **startsWith**: To check if string starts with a particular word
+- **fromCharCode**: Function to get string from char code
+- **stringIncludes**: Function to check if string includes a particular word or not
+- **positionOf**:  Function to get position of a particular word within a string
+- **lastPositionOf**: Function to get last position/index value of a particular word within a string
+- **lengthOfString**: Function to get length of a string
+- **stringMatches**:  Function to check if string matched a particular regex or a word in a given string
+- **repeatString**: Function to repeat string n number of times 
+- **replaceString**: Function to replace a word with another within a string
+- **splitString**: Function to return a string between two index within a string
+- **convertStringToArray**: Function to return array of words from string using a specific splitter
+- **convertFirstCaps**: Function to convert first letter of string into capital order
+- **convertCamelCase**: Function to convert string into camel case
+- **convertPascalCase**: Function to convert string into pascal case
+- **convertNormalCase**: Function to convert any other character format into normal like pascal to normal
+- **convertRoman**: Function to convert normal number into roman format
 
 ## Contributing
 
