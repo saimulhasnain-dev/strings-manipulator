@@ -1,6 +1,6 @@
 ![npm version](https://img.shields.io/npm/v/strings-manipulator?color=green&label=npm&style=flat-square)
 ![size](https://img.shields.io/bundlephobia/min/@saimulhasnain-dev/strings-manipulator)
-# Input validator
+# Strings manipulator
 
 > Human-friendly and powerful data validator library for JavaScript
 
